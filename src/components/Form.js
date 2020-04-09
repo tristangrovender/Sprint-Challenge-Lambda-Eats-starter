@@ -8,7 +8,7 @@ const formSchema = yup.object().shape({
         .string()
         .min(2)
         .required("Name is required and must be at least 2 characters"),
-    sizeDropdown: yup.string().required(),
+    sizeDropdown: yup.string(),
     pepperoni: yup.string(),
     sausage: yup.string(),
     mushroom: yup.string(),
@@ -118,6 +118,9 @@ export default function Form() {
                         value={formState.name}
                         onChange={inputChange}
                     />
+                    {errors.name.length > 0 ? (
+                        <p className="error">{errors.name}</p>
+                    ) : null}
                 </label>
                 <br />
                 <label htmlFor="sizeDropdown">
