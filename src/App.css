@@ -1,20 +1,117 @@
+/* Pallette */
+
+/* #5D5C61 */
+/* #379683 NOT WORKING SUPPOSED TO BE GREY*/
+/* #7395AE */
+/* #557A95 */
+/* #B1A296 */
+
 .App {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    background-color: #557a95;
+    min-height: 100vh;
 }
 
 .header {
-    background-color: #282c34;
+    background-color: #5d5c61;
     min-height: 20vh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    font-size: 4rem;
+    color: black;
+    margin: 0;
+}
+
+.nav-container {
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.nav-container a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-container a:hover {
+    color: #5d5c61;
+}
+
+.order {
+    margin-left: 10px;
+}
+
+.form-container {
+    border: 1px solid black;
+    padding: 20px;
+    max-width: 1000px;
+    font-size: 2rem;
+    background-color: #7395ae;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pepperoni {
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+.sausage {
+    font-size: 1.5rem;
+}
+.mushroom {
+    font-size: 1.5rem;
+}
+.olives {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 150px;
+    display: inline-block;
+    padding: 8px 11px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    outline: none;
+    background-color: #5d5c61;
+    /* background-image: linear-gradient(to right, #5d5c61, grey); */
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-image: none;
+    background-color: #4dd0e1;
+    color: black;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+    background-image: none;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.1);
+    cursor: not-allowed;
 }
 
 .error {
-    font-size: 0.5rem;
+    font-size: 1rem;
     color: red;
     margin: 0px;
+    padding: 0px;
 }

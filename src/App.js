@@ -8,11 +8,15 @@ const App = () => {
     return (
         <div className="App">
             <h1 className="header">Lambda Eats</h1>
-            <Link exact to="/">
-                Home
-            </Link>
-            <br />
-            <Link to="/pizza">Order now!</Link>
+            <div className="nav-container">
+                <Link className="home" exact to="/">
+                    Home
+                </Link>
+                <br />
+                <Link className="order" to="/pizza">
+                    Order now!
+                </Link>
+            </div>
             <Route path="/" exact component={Home} />
             <Route path="/pizza" component={Form} />
         </div>

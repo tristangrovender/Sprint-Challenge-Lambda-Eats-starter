@@ -107,10 +107,10 @@ export default function Form() {
     };
 
     return (
-        <div className="form">
-            <form onSubmit={formSubmit}>
+        <div className="form-container">
+            <form className="form" onSubmit={formSubmit}>
                 <label htmlFor="name">
-                    Name:
+                    Name: {""}
                     <input
                         id="name"
                         type="text"
@@ -122,9 +122,8 @@ export default function Form() {
                         <p className="error">{errors.name}</p>
                     ) : null}
                 </label>
-                <br />
                 <label htmlFor="sizeDropdown">
-                    Select a size:
+                    Select a size: {""}
                     <select
                         id="sizeDropdown"
                         name="sizeDropdown"
@@ -136,10 +135,8 @@ export default function Form() {
                         <option value="Family size">Family size</option>
                     </select>
                 </label>
-                <br />
+                Topping choices:
                 <label htmlFor="pepperoni" className="pepperoni">
-                    Topping choices:
-                    <br />
                     <input
                         type="checkbox"
                         name="pepperoni"
@@ -175,7 +172,6 @@ export default function Form() {
                     />
                     Olives
                 </label>
-                <br />
                 <label htmlFor="instructions">
                     Special instructions:
                     <br />
@@ -186,7 +182,6 @@ export default function Form() {
                         onChange={inputChange}
                     />
                 </label>
-                <br />
                 <button disabled={buttonDisabled}>Submit</button>
                 <pre>{JSON.stringify(user, null, 2)}</pre>
             </form>
